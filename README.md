@@ -1,113 +1,185 @@
-🌍 WanderLust – Full Stack Travel Accommodation Platform
+# 🏡 StayHub – Enterprise-Grade Travel Accommodation Platform
 
-WanderLust is a production-ready full-stack web application that enables users to discover, create, and manage travel accommodation listings. The platform integrates authentication, image uploads, geolocation services, and role-based authorization to deliver a complete real-world CRUD experience.
+StayHub is a production-ready full-stack accommodation marketplace that enables users to discover, create, and manage travel property listings through a secure and intuitive web experience.
 
-Designed with scalable backend architecture and interactive map integration, this project demonstrates modern full-stack development practices using the MERN ecosystem fundamentals.
+The platform integrates authentication, cloud-based image management, geolocation services, interactive maps, and role-based authorization to deliver a scalable real-world CRUD application. Built using modern JavaScript technologies and the MVC architectural pattern, StayHub demonstrates industry-standard backend engineering, maintainable code organization, and responsive user interface design.
 
-🚀 Core Features
+---
 
-🔐 Secure User Authentication (Register / Login / Logout)
+# 🚀 Core Features
 
-🏠 Create, Update & Delete Property Listings
+- 🔐 Secure User Authentication (Register, Login & Logout)
+- 🏡 Create, Update & Delete Property Listings
+- 🖼️ Cloud-based Image Upload & Management (Cloudinary)
+- ⭐ Review & Rating System
+- 🛡️ Role-Based Authorization & Route Protection
+- 🗺️ Interactive Maps with Geolocation Support
+- 💬 Flash Messaging & Centralized Error Handling
+- 📱 Fully Responsive User Interface
+- 📂 MVC-Based Project Architecture
 
-🖼️ Cloud-based Image Upload (Cloudinary Integration)
+---
 
-⭐ Review & Rating System
+# 🛠️ Technology Stack
 
-🛡️ Role-Based Authorization (Owner-only modifications)
+## Backend
 
-🗺️ Interactive Map with Geolocation (Leaflet + OpenStreetMap)
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose ODM
+- Passport.js Authentication
+- Express Session
+- Connect Flash
 
-💬 Flash Messaging & Centralized Error Handling
+## Frontend
 
-📱 Responsive UI using Bootstrap
+- EJS (Server-Side Rendering)
+- Bootstrap 5
+- HTML5
+- CSS3
+- JavaScript (ES6)
 
-🛠️ Tech Stack
-Backend
+## Integrations & Services
 
-Node.js
+- Cloudinary (Image Storage)
+- Multer (File Uploads)
+- Leaflet.js
+- OpenStreetMap Geocoding
+- Express Validator
 
-Express.js
+---
 
-MongoDB
+# 📁 Project Architecture
 
-Mongoose
+```
+StayHub
+│
+├── controllers/      Business Logic
+├── models/           Database Models
+├── routes/           Application Routes
+├── views/            EJS Templates
+├── public/           CSS, JavaScript & Assets
+├── utils/            Utility Functions
+├── middleware.js     Custom Middleware
+├── app.js            Application Entry Point
+└── package.json
+```
 
-Passport.js (Authentication)
+The application follows the **Model–View–Controller (MVC)** architecture, ensuring clean separation of concerns, scalability, and maintainability.
 
-Frontend
+---
 
-EJS (Server-Side Rendering)
+# 🔐 Authentication & Authorization
 
-Bootstrap
+StayHub implements secure authentication and authorization using Passport.js.
 
-Leaflet.js (Maps & Location Display)
+### Authentication
 
-Integrations & Tools
+- User Registration
+- Secure Login
+- Session-Based Authentication
+- Logout
 
-Cloudinary (Image Hosting)
+### Authorization
 
-Multer (File Upload Handling)
+- Only authenticated users can create listings.
+- Only listing owners can edit or delete their listings.
+- Reviews are linked to registered users.
+- Protected routes are secured through custom middleware.
 
-OpenStreetMap (Geocoding Services)
+---
 
-Express-Session & Connect-Flash
+# 🗺️ Maps & Location Services
 
-📁 Project Architecture
-controllers/   → Application logic (Listings, Reviews, Users)
-models/        → Mongoose Schemas & Data Models
-routes/        → Route Definitions
-views/         → EJS Templates (UI Layer)
-public/        → Static Assets (CSS, JS)
-utils/         → Custom Middleware & Error Handling
+StayHub integrates **OpenStreetMap** and **Leaflet.js** to provide an interactive location experience.
 
+Features include:
 
-The project follows a clean MVC architecture to ensure separation of concerns and maintainability.
+- Automatic Geocoding
+- Interactive Map Rendering
+- Dynamic Location Markers
+- Property Location Visualization
 
-🔐 Authentication & Authorization Flow
+---
 
-Only authenticated users can create listings.
+# ⚙️ Local Installation
 
-Only listing owners can edit or delete their listings.
+## 1. Clone Repository
 
-Reviews are linked to registered users.
+```bash
+git clone https://github.com/Kaifislam48/StayHub.git
 
-Protected routes use middleware-based access control.
+cd StayHub
+```
 
-🗺️ Map & Location Integration
+## 2. Install Dependencies
 
-Each listing stores geographic coordinates using OpenStreetMap geocoding.
-Locations are displayed dynamically on an interactive Leaflet map with markers for better visualization.
-
-⚙️ Local Installation Guide
-1️⃣ Clone the Repository
-git clone https://github.com/saikaislam999/WANDERLUST-PROJECT.git
-cd WANDERLUST-PROJECT
-
-2️⃣ Install Dependencies
+```bash
 npm install
+```
 
-3️⃣ Configure Environment Variables
+## 3. Configure Environment Variables
 
-Create a .env file in the root directory and add:
+Create a `.env` file inside the project root.
 
+```env
 MONGO_URL=your_mongodb_connection_string
+
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
+
 SESSION_SECRET=your_session_secret
+```
 
-4️⃣ Run the Application
+## 4. Start the Development Server
+
+```bash
 node app.js
+```
 
+or
 
-Or using nodemon:
-
+```bash
 nodemon app.js
+```
 
-5️⃣ Access the Application
+## 5. Open in Browser
+
+```
 http://localhost:3000
+```
 
-👨‍💻 Developer
+---
 
-Developed with focus on backend architecture, authentication security, and scalable project structure.
+# 🚀 Future Enhancements
+
+- 📅 Property Booking System
+- 💳 Secure Online Payments
+- ❤️ Wishlist & Favorites
+- 🔍 Advanced Search & Filtering
+- 📊 Admin Dashboard
+- 📧 Email Notifications
+- 🤖 AI-Powered Property Recommendations
+- 🐳 Docker & Containerization
+- ☁️ Cloud Deployment
+- 📈 Analytics Dashboard
+- 🔔 Real-Time Notifications
+
+---
+
+# 👨‍💻 Developer
+
+**Kaif Islam**
+
+Software Engineer
+
+- GitHub: https://github.com/Kaifislam48
+- LinkedIn: https://www.linkedin.com/in/kaifislam49/
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, please consider giving it a ⭐ on GitHub.
